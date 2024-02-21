@@ -1,0 +1,53 @@
+{
+  "name": "sheets-test1",
+  "version": "1.0.8",
+  "description": "my cool description",
+  "main": "./lib/umd/index.js",
+  "module": "./lib/esm/index.js",
+  "types": "./lib/esm/index.d.ts",
+  "type": "module",
+  "scripts": {
+    "build": "npm run build:esm",
+    "build:esm": "tsc --module esnext --target es2017 --outDir lib/esm",
+    "prepublishOnly": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marijndegen/sheets-test1.git"
+  },
+  "keywords": [
+    "xlsx",
+    "csv",
+    "sheets",
+    "CoVadem",
+    "Autena",
+    "Open-Source"
+  ],
+  "author": "Marijn Degen",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/marijndegen/sheets-test1/issues"
+  },
+  "homepage": "https://github.com/marijndegen/sheets-test1#readme",
+  "sideEffects": false,
+  "files": [
+    "lib",
+    "src"
+  ],
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^25.0.7",
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "@rollup/plugin-typescript": "^11.1.6",
+    "@types/csv-stringify": "^3.1.0",
+    "@types/node": "^20.11.19",
+    "rollup": "^3.7.4",
+    "rollup-plugin-node-polyfills": "^0.2.1",
+    "ts-node": "^10.7.0",
+    "typescript": "^5.1.6",
+    "undici-types": "^6.6.2",
+    "webpack": "^5.90.3"
+  },
+  "dependencies": {
+    "xlsx": "^0.18.5"
+  }
+}
